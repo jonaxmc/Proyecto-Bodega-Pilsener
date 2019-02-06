@@ -1,0 +1,80 @@
+-- MySQL dump 10.13  Distrib 8.0.14, for Win64 (x86_64)
+--
+-- Host: localhost    Database: proyectosl
+-- ------------------------------------------------------
+-- Server version	8.0.14
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `usuarios` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` char(50) NOT NULL,
+  `apellido` char(50) NOT NULL,
+  `correo` char(100) NOT NULL,
+  `pass` char(50) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'Jonathan','Mañay','jona@gmail.com','12345'),(2,'Cynthia','Maza','cynthia@gmail.com','345'),(6,'Paul','Pazos','paul@gmail.com','789'),(7,'Jonathan','Mañay','bodegapilsener@gmail.com','12345'),(8,'Usuario','UPS','usuarioups69@gmail.com','usuarioups12345'),(9,'','','',''),(10,'dsf','fsd','ewr','er'),(11,'','','',''),(12,'','','',''),(13,'','','',''),(14,'','','','');
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `venta`
+--
+
+DROP TABLE IF EXISTS `venta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `venta` (
+  `id_venta` int(11) NOT NULL AUTO_INCREMENT,
+  `cant_productos` int(11) NOT NULL,
+  `cant_disponibles` int(11) NOT NULL,
+  `jabas_vendidas` int(11) NOT NULL,
+  PRIMARY KEY (`id_venta`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `venta`
+--
+
+LOCK TABLES `venta` WRITE;
+/*!40000 ALTER TABLE `venta` DISABLE KEYS */;
+INSERT INTO `venta` VALUES (1,100,82,18),(2,0,-2,2),(3,0,-3,3),(4,50,50,0),(5,0,-5,5),(6,100,100,0),(7,0,-20,20),(8,50,50,0),(9,0,-10,10),(10,0,-8,8),(11,10,10,0),(12,0,-2,2),(13,0,-8,8),(14,0,-7,7),(15,0,0,0),(16,0,0,0),(17,20,20,0),(18,0,-8,8),(19,25,25,0),(20,0,-7,7),(21,78,78,0),(22,0,-4,4),(23,78,74,4),(24,78,76,2),(25,0,-2,2),(26,25,25,0),(27,3,3,0),(28,10,10,0),(29,10,5,5),(30,20,15,5),(31,10,5,5),(32,10,-10,20),(33,20,20,0),(34,30,30,0),(35,0,-5,5),(36,30,30,0),(37,0,-5,5),(38,30,30,0),(39,0,-2,2);
+/*!40000 ALTER TABLE `venta` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-02-05 17:18:59
